@@ -1,0 +1,28 @@
+@font-face{
+     font-family:'NexaScript-Light';
+     src: url('NexaScript-Light.svg#NexaScript-Light') format('svg'),
+          url('NexaScript-Light.ttf') format('truetype'),
+          url('NexaScript-Light.woff') format('woff'),
+          url('Nexa Script Light.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face{
+     font-family:'MyriadPro-Regular';
+     src: url('MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
+          url('MyriadPro-Regular.ttf') format('truetype'),
+          url('MyriadPro-Regular.woff') format('woff'),
+          url('MyriadPro-Regular.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face{
+     font-family:'Rosalinda-Regular';
+     src: url('Rosalinda-Regular.svg#Rosalinda-Regular') format('svg'),
+          url('Rosalinda-Regular.ttf') format('truetype'),
+          url('Rosalinda-Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}

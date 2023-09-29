@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'NexaScript-Light', cursive;
+    font-weight:600;
+}
+
+a{text-decoration:none;}
+
+ul{list-style:none;}
+
+section{
+    display:flex;
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    overflow:hidden;
+    justify-content:center;
+    align-items:center;
+}
+
+header{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:5;
+    padding:30px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.45);
+}
+
+header .toggle{
+    font-family:'Myriad Pro', sans-serif;
+    position:relative;
+    z-index:12;
+    width:45px;
+    height:30px;
+    background-image:url(../i/menu.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+header .toggle::before{
+    content:'Menu';
+    position:absolute;
+    text-transform:uppercase;
+    color:#b6b6b6;
+    font-size:16px;
+    background:#fff;
+    padding:8px 15px;
+    font-weight:400;
+    letter-spacing:2px;
+    right:55px;
+}
+
+header .toggle.active{
+    background-image:url(../i/close.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    cursor:pointer;
+}
+
+header .toggle.active::before{
+    content:'Close';
+}
+
+video{
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+
+section .content{
+    position:relative;
+    z-index:7;
+    text-align:center;
+    transition:0.3s;
+    transition-delay:0.3s;
+}
+
+section .content h2{
+    font-size:96px;
+    font-family:"Rosalinda-Regular", cursive;
+    color: rgb(255, 255, 255);
+    line-height: 0.75;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+}
+
+section .content h2 span{
+    font-family:'NexaScript-Light', cursive;
+    font-size:36px;
+    letter-spacing:5px;
+    border-radius:5px;
+    padding:5px 10px;
+    background:rgba(255, 255, 255, 0.5);
+    color:#020000;
+    text-shadow:none;
+}
+
+section.active .content{
+    opacity:0;
+    visibility:hidden;
+    transition-delay:0.1s;
+    transform:translateX(-300px);
+}
+
+/* Вторая страница (с размытием): */
+section .glass{
+    position:absolute;
+    top:0;
+    right:0;  
+    height:100%;
+    z-index:3;
+}
+
+section.active .glass{
+    width:100%;
+    backdrop-filter: blur(20px);
+    position:absolute;
+    transition-delay:.2s;
+}
+
+section .social{
+    font-family:'Myriad Pro', sans-serif;
+    position:absolute;
+    z-index:10;
+    right:100px;
+    bottom:40px;
+    display:flex;
+}
+
+section .social li{
+    margin:5px;
+    padding:6px 8px;
+    background:#fff;
+    transition:0.3s;
+}
+
+section .social li a{
+    color:#111;
+    letter-spacing:1px;
+    display:inline-block;
+    font-weight:500;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+section.active .social li{
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(200px);
+    transition:0.3s;
+}
+
+section .nav_menu{
+    font-family:"Times New Roman", sans-serif;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:11;
+}
+
+section .nav_menu li{
+    text-align:center;
+    margin:15px 0;
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    transform:translateX(300px);
+}
+
+section .nav_menu li a{
+    color:#111;
+    font-size:1.5em;
+    letter-spacing:4px;
+    text-decoration:none;
+    background:#fff;
+    text-transform:uppercase;
+    padding:4px 10px;
+    display:inline-block;
+}
+
+section .nav_menu li a:hover{
+    background:#111;
+    color:#fff;
+    letter-spacing:5px;
+}
+
+section.active .nav_menu li{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(0px);
+    transition:1s;
+}
